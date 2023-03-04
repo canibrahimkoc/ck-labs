@@ -6,7 +6,11 @@ ID: "1012f3ac-e584-464e-a4a3-3ff7f1a7a4fd"
 tags: []
 slug: "graph-protocol"
 coverImage: "public/assets/1677950080034_20160901_135130.jpg"
-author: []
+author:
+  ID: "a6693865-801a-426c-8f00-f4c077139934"
+  name: "Root"
+  picture: "public/assets/1677950396280_1663603027_50-phonoteka-org-p-zloi-krolik-art-oboi-65-1.jpg"
+  createdAt: 1677950397127
 ogImage: []
 createdAt: 1677950091501
 
