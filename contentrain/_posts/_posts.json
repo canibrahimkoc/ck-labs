@@ -95,7 +95,11 @@
       "picture": "public/assets/1677950396280_1663603027_50-phonoteka-org-p-zloi-krolik-art-oboi-65-1.jpg",
       "createdAt": 1677950397127
     },
-    "ogImage": [],
+    "ogImage": {
+      "ID": "854784c2-e4bc-4a92-a548-ed4cef247acf",
+      "url": "public/assets/1677950437383_images (1).jpeg",
+      "createdAt": 1677950437892
+    },
     "createdAt": 1677950091501
   }
 ]
