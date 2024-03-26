@@ -56,3 +56,11 @@
     // add_filter( 'mylisting\single\og:image', function() {
     //     return 'cover';
     // } );
+
+
+
+// Favicon eklemek için fonksiyon
+function my_custom_favicon() {
+    echo '<link rel="apple-touch-icon" sizes="180x180" href="' . esc_url( get_stylesheet_directory_uri() ) . '/img/apple-touch-icon.png"> <link rel="icon" type="image/png" sizes="32x32" href="' . esc_url( get_stylesheet_directory_uri() ) . '/img/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="16x16" href="' . esc_url( get_stylesheet_directory_uri() ) . '/img/favicon-16x16.png"> <link rel="manifest" href="' . esc_url( get_stylesheet_directory_uri() ) . '/img/site.webmanifest"> <link rel="mask-icon" href="' . esc_url( get_stylesheet_directory_uri() ) . '/img/safari-pinned-tab.svg" color="#000000"> <meta name="apple-mobile-web-app-title" content="CK"> <meta name="application-name" content="CK"> <meta name="msapplication-TileColor" content="#ffffff"> <meta name="theme-color" content="#ffffff">' . "\n";
+}
+add_action( 'wp_head', 'my_custom_favicon' );
