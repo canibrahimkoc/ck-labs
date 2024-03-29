@@ -13,21 +13,9 @@
     }
     add_action('wp_footer', 'add_custom_js_to_footer');
 
-    // script - style remove
-    function remove_head_scripts() { 
-        wp_print_styles( 'mylisting-header', 5000);
-    } 
-    add_action( 'wp_head', 'remove_head_scripts' ); 
-
     // disable widgets and editor classic
     add_filter('use_widgets_block_editor', '__return_false');
     add_filter('use_block_editor_for_post', '__return_false');
-
-    // login redirect
-    // function custom_login_slug() {
-    //     return home_url('/giris/');
-    // }
-    // add_filter('login_url', 'custom_login_slug');
 
     // scry 
     remove_action('wp_head', 'wp_generator'); // WordPress sürüm numarasını kaldırır
@@ -45,12 +33,10 @@
     add_filter( 'body_class','my_body_classes' );
     function my_body_classes( $classes ) {
         $classes[] = ' qodef-skin--white';
-        
         return $classes;
     }
 
     add_filter( 'acf/settings/show_admin', '__return_true', 50 );
-
 
 
     // add_filter( 'mylisting\single\og:image', function() {
@@ -58,9 +44,19 @@
     // } );
 
 
+    // Favicon eklemek için fonksiyon
+    function my_custom_favicon() {
+        echo '<link rel="apple-touch-icon" sizes="180x180" href="' . esc_url( get_stylesheet_directory_uri() ) . '/img/apple-touch-icon.png"> <link rel="icon" type="image/png" sizes="32x32" href="' . esc_url( get_stylesheet_directory_uri() ) . '/img/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="16x16" href="' . esc_url( get_stylesheet_directory_uri() ) . '/img/favicon-16x16.png"> <link rel="manifest" href="' . esc_url( get_stylesheet_directory_uri() ) . '/img/site.webmanifest"> <link rel="mask-icon" href="' . esc_url( get_stylesheet_directory_uri() ) . '/img/safari-pinned-tab.svg" color="#000000"> <meta name="apple-mobile-web-app-title" content="CK"> <meta name="application-name" content="CK"> <meta name="msapplication-TileColor" content="#ffffff"> <meta name="theme-color" content="#ffffff">' . "\n";
+    }
+    add_action( 'wp_head', 'my_custom_favicon' );
 
-// Favicon eklemek için fonksiyon
-function my_custom_favicon() {
-    echo '<link rel="apple-touch-icon" sizes="180x180" href="' . esc_url( get_stylesheet_directory_uri() ) . '/img/apple-touch-icon.png"> <link rel="icon" type="image/png" sizes="32x32" href="' . esc_url( get_stylesheet_directory_uri() ) . '/img/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="16x16" href="' . esc_url( get_stylesheet_directory_uri() ) . '/img/favicon-16x16.png"> <link rel="manifest" href="' . esc_url( get_stylesheet_directory_uri() ) . '/img/site.webmanifest"> <link rel="mask-icon" href="' . esc_url( get_stylesheet_directory_uri() ) . '/img/safari-pinned-tab.svg" color="#000000"> <meta name="apple-mobile-web-app-title" content="CK"> <meta name="application-name" content="CK"> <meta name="msapplication-TileColor" content="#ffffff"> <meta name="theme-color" content="#ffffff">' . "\n";
-}
-add_action( 'wp_head', 'my_custom_favicon' );
+    // JS dosyalarını footera taşıma kodu başlangıcı. 
+    // function remove_head_scripts() { 
+    // remove_action('wp_head', 'wp_print_scripts'); 
+    // remove_action('wp_head', 'wp_print_head_scripts', 9); 
+    // remove_action('wp_head', 'wp_enqueue_scripts', 1); 
+    // add_action('wp_footer', 'wp_print_scripts', 5); 
+    // add_action('wp_footer', 'wp_enqueue_scripts', 5); 
+    // add_action('wp_footer', 'wp_print_head_scripts', 5); } 
+    // add_action( 'wp_enqueue_scripts', 'remove_head_scripts' ); 
+    // JS dosyalarını footera taşıma kodu sonu.

@@ -406,3 +406,61 @@ div#home-news .col-lg-3.col-md-4.col-sm-6.col-xs-12.grid-item {
     height: auto !important;
     padding: 50px 0 !important;
 }
+
+.head-title {
+    border-bottom: 1px solid #ebebeb !important;
+    padding: 0;
+}
+
+.head-title .ml-breadcrumbs h1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+
+
+.add-listing-step #submit-job-form .element .pf-head,
+.add-listing-step .pf-head.round-icon,
+.add-listing-step .add-listing-nav {
+    display: none;
+}
+
+.add-listing-step .element .pf-body,
+.add-listing-step #submit-job-form {
+    padding: 0 !important;
+}
+
+.add-listing-step .fieldset-job_title.field-type-text.form-group, .add-listing-step .fieldset-job_description.field-type-texteditor.form-group {
+    border-top: none !important;
+}
+#submit-job-form div.mce-toolbar-grp {
+    background: #ffffff;
+    margin-left: -13px;
+    margin-block: -10px;
+}
+
+body:not(.elementor-editor-active) .elementor:not([data-elementor-type=header]):not([data-elementor-type=footer]) {
+    display: block;
+}
+
+#submit-job-form .sbf-container {
+    opacity: .5;
+    transform: scale(.97);
+    transition: all .25s;
+    overflow: hidden
+}
+
+#submit-job-form .form-section-wrapper.active+.form-footer .sbf-container,
+#submit-job-form .form-section-wrapper.active .sbf-container,
+body.elementor-editor-active #submit-job-form .sbf-container {
+    opacity: 1;
+    transform: scale(1)
+}
+section.i-section.archive-posts .container {
+    max-width: 700px;
+}
+
+section.i-section.archive-posts .sbf-thumb {
+    height: 300px;
+}
